@@ -30,7 +30,7 @@ public class Sphere {
     private double radius;
     
     /**
-     * Constructor sets the x, y, z coordinate and radius value.
+     * Constructor sets the x, y, z coordinate and radius value of the sphere.
      * @param xValue as a double.
      * @param yValue as a double.
      * @param zValue as a double.
@@ -47,25 +47,25 @@ public class Sphere {
     /** Sets the X-coordinate value to the specified value.
      * @param newX as a double.*/
     public void setX(double newX) {
-        x = newX;
+        this.x = newX;
     }
     
     /** Sets the Y-coordinate value to the specified value.
      * @param newY as a double.*/
     public void setY(double newY) {
-        y = newY;
+        this.y = newY;
     }
     
     /** Sets the Z-coordinate value to the specified value.
      * @param newZ as a double.*/
     public void setZ(double newZ) {
-        z = newZ;
+        this.z = newZ;
     }
     
     /** Sets the radius value to the specified value.
      * @param newRadius as a double.*/
     public void setRadius(double newRadius) {
-        radius = newRadius;
+        this.radius = newRadius;
     }
     
     /** Returns the X-coordinate value as a double.
@@ -113,7 +113,7 @@ public class Sphere {
     public String toString() {
         String result = "The surface area of the sphere is " 
                 + Double.toString(surfaceArea()) 
-                + "\n The volume of the sphere is " 
+                + "\nThe volume of the sphere is " 
                 + Double.toString(volume()); 
         
         return result;

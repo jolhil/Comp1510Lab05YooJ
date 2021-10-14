@@ -16,6 +16,9 @@ public class Cube {
     /** Constant value of three for formula.*/
     private final int three = 3;
     
+    /** Constant value of six for formula.*/
+    private final int six = 6;
+    
     /** X-coordinate.*/
     private double xCoordinate;
     
@@ -29,7 +32,7 @@ public class Cube {
     private double edgeLength;
     
     /**
-     * Constructor sets the x, y, and z coordinate and edge length.
+     * Constructor sets the x, y, and z coordinate and edge length of the cube.
      * @param x as a double.
      * @param y as a double.
      * @param z as a double.
@@ -42,19 +45,19 @@ public class Cube {
         edgeLength = eL;
     }
     
-    /** Returns the x-coordinate as a double.
+    /** Returns the x-coordinate of the cube as a double.
      * @return xCoordinate as a double.*/
     public double getX() {
         return xCoordinate;
     }
     
-    /** Returns the y-coordinate as a double.
+    /** Returns the y-coordinate of the cube as a double.
      * @return yCoordinate as a double.*/
     public double getY() {
         return yCoordinate;
     }
     
-    /** Returns the z-coordinate as a double.
+    /** Returns the z-coordinate of the cube as a double.
      * @return zCoordinate as a double.*/
     public double getZ() {
         return zCoordinate;
@@ -90,10 +93,49 @@ public class Cube {
         edgeLength = newEdge;
     }
     
+    /** Calculate the surface area of the cube and returns the result.
+     * @return surfaceArea as a double*/
+    public double surfaceArea() {
+        double surfaceArea = six * Math.pow(edgeLength, 2);
+        
+        return surfaceArea;
+    }
+    
+    /** Calculate the volume of the cube and returns the result.
+     * @return volume as a double.*/
+    public double volume() {
+        double volume = Math.pow(edgeLength, three);
+        
+        return volume;
+    }
+    
+    /** Calculate the face diagonal of the cube and returns the result.
+     * @return faceDiagonal as a double*/
+    public double faceDiagonal() {
+        double faceDiagonal = Math.sqrt(2) * edgeLength;
+        
+        return faceDiagonal;
+    }
+    
+    /** Calculate the space diagonal of the cube and returns the result.
+     * @return spaceDiagonal as a double.*/
+    public double spaceDiagonal() {
+        double spaceDiagonal = Math.sqrt(three) * edgeLength;
+        
+        return spaceDiagonal;
+    }
+    
     /** Returns a string representation of the cube information.
      * @return result as a string.*/
     public String toString() {
-        String result = "The surface area of the cube is ";
+        String result = "The surface area of the cube is "
+                + Double.toString(surfaceArea())
+                + "\n The volume of the cube is " 
+                + Double.toString(volume())
+                + "\n The face diagonal of the cube is "
+                + Double.toString(faceDiagonal())
+                + "\n The space diagonal of the cube is "
+                + Double.toString(spaceDiagonal());
         
         return result;
     
