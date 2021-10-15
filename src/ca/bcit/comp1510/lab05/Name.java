@@ -156,8 +156,9 @@ public class Name {
                 && this.middleName.equals(name.middleName) 
                 && this.lastName.equals(name.lastName)) {
             return true;
-        }
+        } 
         return false;
+        
     }
     
     /**
