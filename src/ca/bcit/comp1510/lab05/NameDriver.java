@@ -68,10 +68,6 @@ public class NameDriver {
         
         Name newName = new Name(newFirst, newMiddle, newLast);
         
-        newName.setFirstName(newFirst);
-        newName.setMiddleName(newMiddle);
-        newName.setLastName(newLast);
-        
         System.out.println(name.compare(newName));
         scan.close();
     }

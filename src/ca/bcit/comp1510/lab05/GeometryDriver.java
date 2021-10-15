@@ -18,10 +18,11 @@ public class GeometryDriver {
      * 
      * @param args (unused)
      */
+    
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
-        DecimalFormat decimal = new DecimalFormat("#.###");
+        DecimalFormat decimal = new DecimalFormat("#.000");
         
         System.out.println("Enter the radius of the sphere");
         double rS = scan.nextDouble();
@@ -37,10 +38,10 @@ public class GeometryDriver {
         
         Sphere sphere = new Sphere(xS, yS, zS, rS);
         
-        decimal.format(sphere.surfaceArea());
-        decimal.format(sphere.volume());
-        
-        System.out.println(sphere.toString());
+        System.out.println("The surface area of the sphere is "
+                + decimal.format(sphere.surfaceArea())
+                + "\nThe volume of the sphere is "
+                + decimal.format(sphere.volume()));
         
         System.out.println("Enter the edge length of the cube");
         double a = scan.nextDouble();
@@ -53,12 +54,14 @@ public class GeometryDriver {
         
         Cube cube = new Cube(xC, yC, zC, a);
         
-        decimal.format(cube.surfaceArea());
-        decimal.format(cube.volume());
-        decimal.format(cube.faceDiagonal());
-        decimal.format(cube.spaceDiagonal());
-        
-        System.out.println(cube.toString());
+        System.out.println("The surface area of the cube is " 
+                + decimal.format(cube.surfaceArea()) 
+                + "\nThe volume of the cube is "
+                + decimal.format(cube.volume())
+                + "\nThe face diagonal of the cube is "
+                + decimal.format(cube.faceDiagonal())
+                + "\nThe space diagonal of the cube is "
+                + decimal.format(cube.spaceDiagonal()));
         
         System.out.println("Enter the radius of the cone");
         double rCone = scan.nextDouble();
@@ -68,11 +71,12 @@ public class GeometryDriver {
         
         Cone cone = new Cone(rCone, hCone);
         
-        decimal.format(cone.volume());
-        decimal.format(cone.slantHeight());
-        decimal.format(cone.surfaceArea());
-        
-        System.out.println(cone.toString());
+        System.out.println("The volume of the cone is "
+                + decimal.format(cone.volume()) 
+                + "\nThe slant height of the cone is " 
+                + decimal.format(cone.slantHeight())
+                + "\nThe surface area of the cone is " 
+                + decimal.format(cone.surfaceArea()));
         
         scan.close();
     }
