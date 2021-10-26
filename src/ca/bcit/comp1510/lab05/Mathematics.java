@@ -14,7 +14,7 @@ package ca.bcit.comp1510.lab05;
 public class Mathematics {
 
     /** Constant PI.*/
-    public static final String PI = null;
+    public static final double PI = Math.PI;
 
     /** Returns the area of the circle with the specified radius.
      * @param radius of the circle..
@@ -56,7 +56,7 @@ public class Mathematics {
         } else if (number < 0) {
             for (int i = 0; i >= number; i--) {
                 if (i % 2 == 0) {
-                    evensum = evensum - i;
+                    evensum = evensum + i;
                 }
             }
             return evensum;
